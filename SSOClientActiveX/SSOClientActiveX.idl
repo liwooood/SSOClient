@@ -1,0 +1,49 @@
+// SSOClientActiveX.idl : ActiveX 控件项目的类型库源。
+
+// 此文件将由 MIDL 编译器工具处理以
+// 产生类型库(SSOClientActiveX.tlb)，该类型库将成为
+// SSOClientActiveX.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(6F2D4A6A-281B-4959-8C45-BCBD94FD1350), version(1.0),
+  control ]
+library SSOClientActiveXLib
+{
+	importlib(STDOLE_TLB);
+
+	//  CSSOClientActiveXCtrl 的主调度接口
+	[ 
+		uuid(3AD217DA-46BF-4571-81A3-0905FA376978)	
+	]
+	dispinterface _DSSOClientActiveX
+	{
+		properties:
+		methods:
+	};
+
+	//  CSSOClientActiveXCtrl 的事件调度接口
+
+	[ 
+		uuid(14D1D9DA-2375-4943-9D47-17B5B7D2B090)	
+	]
+	dispinterface _DSSOClientActiveXEvents
+	{
+		properties:
+			//  事件接口没有任何属性
+
+		methods:
+	};
+
+	//  CSSOClientActiveXCtrl 的类信息
+	[
+		uuid(1F1A35D3-AE6B-44F4-ADF5-E379A1480D62)
+	]
+	coclass SSOClientActiveX
+	{
+		[default] dispinterface _DSSOClientActiveX;
+		[default, source] dispinterface _DSSOClientActiveXEvents;
+	};
+
+};
